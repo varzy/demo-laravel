@@ -1,23 +1,36 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
-    },
-    "devDependencies": {
-        "@tailwindcss/forms": "^0.2.1",
-        "alpinejs": "^2.7.3",
-        "autoprefixer": "^10.1.0",
-        "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.2.1",
-        "postcss-import": "^12.0.1",
-        "tailwindcss": "^2.0.2"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "eslint": "eslint --fix 'resources/**/*.js'",
+    "format:fe": "prettier 'resources/**/*.{js,ts,vue,json,css}' --write",
+    "format:php": "prettier '**/*.php' --write",
+    "format:blade": "blade-formatter 'resources/**/*.blade.php' -w -i=2",
+    "lint": "npm run format:fe && npm run format:php && npm run format:blade && npm run eslint"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@prettier/plugin-php": "^0.17.5",
+    "@tailwindcss/forms": "^0.2.1",
+    "autoprefixer": "^10.1.0",
+    "axios": "^0.21",
+    "blade-formatter": "^1.13.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "laravel-mix": "^6.0.6",
+    "lodash": "^4.17.19",
+    "postcss": "^8.2.1",
+    "postcss-import": "^12.0.1",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.0.2"
+  }
 }
