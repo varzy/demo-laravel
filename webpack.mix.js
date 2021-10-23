@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const { dependencies } =require('./package.json');
 
 /*
  |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ mix
     require('autoprefixer'),
   ])
   .disableNotifications()
-  .extract(['jquery']);
+  .extract(Object.keys(dependencies));
 
 if (mix.inProduction()) {
   mix.version();

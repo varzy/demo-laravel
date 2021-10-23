@@ -14,6 +14,11 @@
     "format:blade": "blade-formatter 'resources/**/*.blade.php' -w -i=2",
     "lint": "npm run format:fe && npm run format:php && npm run format:blade && npm run eslint"
   },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/eslint-parser": "^7.15.8",
@@ -21,7 +26,6 @@
     "@prettier/plugin-php": "^0.17.5",
     "@tailwindcss/forms": "^0.2.1",
     "autoprefixer": "^10.1.0",
-    "axios": "^0.21",
     "blade-formatter": "^1.13.0",
     "browser-sync": "^2.27.5",
     "browser-sync-webpack-plugin": "^2.3.0",
@@ -29,7 +33,6 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "laravel-mix": "^6.0.6",
-    "lodash": "^4.17.19",
     "postcss": "^8.2.1",
     "postcss-import": "^12.0.1",
     "prettier": "^2.4.1",
