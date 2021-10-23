@@ -11,8 +11,24 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+mix
+  .js('resources/js/app.js', 'public/js')
+  .postCss('resources/css/app.css', 'public/css', [
     require('postcss-import'),
     require('tailwindcss'),
     require('autoprefixer'),
-]);
+  ])
+  .disableNotifications()
+  .extract(['jquery']);
+
+if (mix.inProduction()) {
+  mix.version();
+} else {
+  mix.sourceMaps();
+  // <https://github.com/laravel-mix/laravel-mix/issues/2719>
+  // .browserSync({
+  //   proxy: 'localhost',
+  //   open: false,
+  //   port: 8000,
+  // });
+}
