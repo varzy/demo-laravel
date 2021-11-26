@@ -1,3 +1,5 @@
 <x-layout-app>
-123
+  <div class="{{ route_class() }}">
+    index
+  </div>
 </x-layout-app>

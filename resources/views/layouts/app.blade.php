@@ -17,19 +17,26 @@
 
 <body class="font-sans antialiased">
   <div class="min-h-screen bg-gray-100">
-{{--    @include('layouts.navigation')--}}
-
     <!-- Page Heading -->
     <header class="bg-white shadow">
       <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-{{--        {{ $header }}--}}
+        @include('layouts.header')
       </div>
     </header>
 
     <!-- Page Content -->
     <main>
-      {{ $slot }}
+      <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        {{ $slot }}
+      </div>
     </main>
+
+    <!-- Page Footer -->
+    <footer class="bg-black text-white">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        @include('layouts.footer')
+      </div>
+    </footer>
   </div>
 
   <!-- Scripts -->

@@ -19,6 +19,7 @@ mix
     require('tailwindcss'),
     require('autoprefixer'),
   ])
+  .copyDirectory('resources/assets', 'public/assets')
   .disableNotifications()
   .extract(Object.keys(dependencies));
 
