@@ -21,8 +21,8 @@ fi
 # 手动修改 .env
 
 # 修改 sail 基础镜像
-sed -i '' 's/TZ=UTC/TZ=PRC/' vendor/laravel/sail/runtimes/8.0/Dockerfile
-sed -i '' "/RUN apt-get update/i \\
+sed -i 's/TZ=UTC/TZ=PRC/g' vendor/laravel/sail/runtimes/8.0/Dockerfile
+sed -i "/RUN apt-get update/i \\
 RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list\\
 " vendor/laravel/sail/runtimes/8.0/Dockerfile
 
